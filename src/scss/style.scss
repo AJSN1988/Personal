@@ -1,0 +1,367 @@
+// Fonts
+@font-face {
+    font-family: 'Andale';
+    src: url('../fonts/andale_mono.ttf');
+}
+$regularFontSize: 13px;
+
+// Colors
+$termGreen: #00d600;
+$termBlack: black;
+$termWhite: white;
+$termBlue: #4a89f0;
+$termRed: red;
+$termAqua: aqua;
+$termOrange: orange;
+$termLightBlue: #6faece;
+$termPurple: #ff0999;
+$termGray: #C3C3C3;
+
+// Common styles
+body {
+    // background-color: $termBlack;
+    font-size: $regularFontSize;
+    font-family: 'Andale';
+    margin: 0;
+    // line-height: 1.3;
+}
+
+// Colored text classes
+
+.green-text {
+    color: $termGreen;
+}
+
+.white-text {
+    color: $termWhite;
+}
+
+.blue-text {
+    color: $termBlue;
+}
+
+.red-text {
+    color: $termRed;
+}
+
+.orange-text {
+    color: $termOrange;
+}
+
+.black-text {
+    color: $termBlack;
+}
+
+.grey-text {
+    color: $termGray;
+}
+
+.purple-text {
+    color: $termPurple;
+}
+
+.yellow-text {
+    color: #f7ff00;
+}
+
+.i-purple-text {
+    color: $termPurple;
+    font-style: italic;
+}
+
+
+p {
+    margin: 5px 0;
+}
+
+
+.logo {
+    p {
+        margin: 0;
+    }
+}
+
+.cli {    
+    .divider {
+        p {
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+}
+
+// App blocks
+
+.app-wrapper {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    overflow-y: scroll;
+    .content {
+        margin: 20px;
+    }
+}
+
+.cli-wrapper, .wizard-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: nowrap;
+    padding: 15px 0 20px 0;
+    .cli-label, .wizard-label {
+        margin-right: 6px;
+        text-shadow: none;
+    }
+    .cli-input {
+        flex-grow: 1;
+        font-family: 'Andale';
+        font-size: $regularFontSize;
+        border: none;        
+        -webkit-text-fill-color: transparent;
+        &:focus {
+            outline: 0;
+        }
+    }
+}
+
+.item {
+    font-size: 13px;
+}
+
+.status-bar {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 11px;
+    // justify-content: flex-end;
+    .locale-status {
+        span {
+            padding-right: 10px;
+        }
+    }
+    .command-status {
+        margin: 0 20px;
+        span {
+            padding-right: 10px;
+        }
+    }
+    .arg-status {
+        span {
+            padding-right: 10px;
+        }
+    }
+}
+
+.clickable-command {
+    border-bottom: 1px dotted $termWhite;
+    text-decoration: none;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.info {
+    font-size: 13px;
+}
+
+.section-header {
+    text-transform: uppercase;    
+}
+
+.section-tips {
+    padding-bottom: 10px;
+}
+
+.divider {
+    white-space: pre;
+    overflow: hidden;
+}
+
+.logo {
+    font-size: 12px;
+    padding-bottom: 15px;
+}
+
+.hello {
+    padding: 10px 0;
+}
+
+.table {
+    margin: 10px 0;
+    border: 1px dashed;
+    border-collapse: collapse;
+}
+
+.table.no-border {
+    border: none;
+    margin: 0;
+    th, td {
+        border: none;
+        padding: 0;
+        min-width: 130px;
+    }
+}
+
+th, td {
+    border: 1px dashed;
+    padding: 5px 10px;
+}
+
+.help-page {
+    margin-top: 10px;
+    .help-header {
+        text-transform: uppercase;
+        padding: 20px 0 5px 0;
+    }
+    .table {
+        margin-top: 15px;
+    }
+}
+
+.skills {
+    margin: 10px 0;
+    .skills-header {
+        text-transform: uppercase;
+        padding: 10px 0 5px 0;
+    }
+    .annotation {
+        padding-bottom: 5px;
+    }
+    .all-skills {
+        padding-top: 5px; 
+    }
+}
+
+.projects {
+    margin: 10px 0;
+    .project, .project-annotation, .project-stack {
+        padding-top: 10px;
+    }
+    .projects-header {
+        text-transform: uppercase;
+        padding: 10px 0 5px 0;
+    }
+    .annotation {
+        padding-bottom: 5px;
+    }
+    .all-projects {
+        padding-top: 5px; 
+    }
+    .project-name {
+        padding-left: 10px;
+    }
+    .project-description {
+        padding-top: 1px;
+    }
+}
+
+.link {
+    color: $termAqua;
+    &:hover {
+        color: $termPurple;
+    }
+}
+
+.contact-links {
+    padding-top: 15px;
+}
+
+.prev-command {
+    margin: 20px 0;
+}
+
+
+// Backgrounds profiles
+
+.background-black {
+    background-color: $termBlack;
+}
+
+.background-blue {
+    background-color: #608394;
+}
+
+.background-sky {
+    background-image: url(../img/sky.png);
+}
+
+// Inputs profiles
+
+.input-black-bckg {
+    background-color: $termBlack;
+}
+
+.input-no-bckg {
+    background: none;
+}
+
+.input-blue-bckg {
+    background-color: #608394;
+}
+
+.input-white-cursor {
+    color: $termWhite;
+}
+
+.input-green-text {
+    text-shadow: 0px 0px 0px $termGreen;
+}
+
+.input-white-text {
+    text-shadow: 0px 0px 0px $termWhite;
+}
+
+// Links 
+
+.purple-hover {
+    &:hover {
+        color: $termPurple;
+    }
+}
+
+.aqua-hover {
+    &:hover {
+        color: $termAqua;
+    }
+}
+
+// Tables profiles
+.green-border {
+    border-color: $termGreen;
+}
+.white-border {
+    border-color: $termWhite;
+}
+
+.blue-border {
+    border-color: $termBlue;
+}
+
+.red-border {
+    border-color: $termRed;
+}
+
+.orange-border {
+    border-color: $termOrange;
+}
+
+.black-border {
+    border-color: $termBlack;
+}
+
+.grey-border {
+    border-color: #C3C3C3;
+}
+
+
+// Media
+
+@media screen and (max-width: 1329px) {
+    body, .cli-input {
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 10px;
+    }
+}
