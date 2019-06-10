@@ -1,7 +1,7 @@
 # Personal
 >Simple personal web template on React
 
-## About QService
+## About this page
 
 My first steps in React (without state management and routing)
 
